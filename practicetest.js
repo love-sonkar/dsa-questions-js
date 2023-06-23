@@ -15,3 +15,5 @@ function palidrome(int) {
 }
 
 console.log(palidrome(44144));
+
+// palidrome function using recursion

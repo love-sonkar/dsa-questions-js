@@ -5,16 +5,15 @@ function palidrome(int) {
   let arr = String(int).split("");
   let end = arr.length - 1;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == arr[end]) {
-      return true;
-    } else {
+    if (arr[i] !== arr[end]) {
+      end--;
       return false;
     }
-    end--;
   }
+  return true;
 }
 
-console.log(palidrome(44144));
+console.log(palidrome(414));
 
 //let's simplified this
 
