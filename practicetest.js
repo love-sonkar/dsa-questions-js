@@ -42,16 +42,21 @@ const ReversFunction = function (s) {
 // Output: true
 
 const isPalindrome = function (s) {
-  s = s.toLowerCase().replace(/[^a-z0-9]/gi, "");
-  if (s == " ") return true;
-  for (let i = 0; i < s.length; i++) {
-    let StrReverse = s.split("").reverse().join("");
-    if (s[i] !== StrReverse[i]) return false;
+  let lower = s;
+  console.log(lower == lower.toUpperCase());
+  if (lower === lower.toUpperCase()) {
+    lower = lower.toLowerCase().replace(/[^a-z0-9]/gi, "");
+    console.log(lower);
+  }
+  if (lower == "") return true;
+  for (let i = 0; i < lower.length; i++) {
+    let StrReverse = lower.split("").reverse().join("");
+    if (lower[i] !== StrReverse[i]) return false;
   }
   return true;
 };
 
-// console.log(isPalindrome("op"));
+console.log(isPalindrome("op UU"));
 
 // const isPalindrome = function (s) {
 //   s = s.toLowerCase().replace(/[^a-z0-9]/gi, "");
@@ -84,21 +89,21 @@ const isPalindrome = function (s) {
 
 //34. Find First and Last Position of Element in Sorted Array
 
-var searchRange = function (nums, target) {
-  if (nums.length !== 0) {
-    let array = [];
-    for (let i = 0; i < nums.length; i++) {
-      if (target == nums[i]) array.push(i);
-    }
-    if (array.length == 0) return [-1, -1];
-    return [array[0], array[array.length - 1]];
-  } else if (nums.length == 0) return [-1, -1];
-  return [-1, -1];
-};
-console.log(searchRange([0], 0));
+// var searchRange = function (nums, target) {
+//   if (nums.length !== 0) {
+//     let array = [];
+//     for (let i = 0; i < nums.length; i++) {
+//       if (target == nums[i]) array.push(i);
+//     }
+//     if (array.length == 0) return [-1, -1];
+//     return [array[0], array[array.length - 1]];
+//   } else if (nums.length == 0) return [-1, -1];
+//   return [-1, -1];
+// };
+// console.log(searchRange([0], 0));
 
-var sum = function (num1, num2) {
-  return num1 + num2;
-};
+// var sum = function (num1, num2) {
+//   return num1 + num2;
+// };
 
-console.log(sum(-11, 5));
+// console.log(sum(-11, 5));
