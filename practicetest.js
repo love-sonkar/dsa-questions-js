@@ -56,7 +56,7 @@ const isPalindrome = function (s) {
   return true;
 };
 
-console.log(isPalindrome("op UU"));
+// console.log(isPalindrome("op UU"));
 
 // const isPalindrome = function (s) {
 //   s = s.toLowerCase().replace(/[^a-z0-9]/gi, "");
@@ -107,3 +107,18 @@ console.log(isPalindrome("op UU"));
 // };
 
 // console.log(sum(-11, 5));
+
+var expect = function (val) {
+  let expectval = val;
+  let toBe = function (valf) {
+    if (expectval === valf) return { value: true };
+    return { error: "Not Equal" };
+  };
+  let notToBe = function (valf) {
+    if (valf !== expectval) return { value: true };
+    return { error: "Equal" };
+  };
+  return { toBe, notToBe };
+};
+console.log(expect(5).toBe("dkj"));
+console.log(expect(5).notToBe(6));
