@@ -108,17 +108,23 @@ const isPalindrome = function (s) {
 
 // console.log(sum(-11, 5));
 
-var expect = function (val) {
-  let expectval = val;
-  let toBe = function (valf) {
-    if (expectval === valf) return { value: true };
-    return { error: "Not Equal" };
-  };
-  let notToBe = function (valf) {
-    if (valf !== expectval) return { value: true };
-    return { error: "Equal" };
-  };
-  return { toBe, notToBe };
+// var expect = function (val) {
+//   let expectval = val;
+//   let toBe = function (valf) {
+//     if (expectval === valf) return { value: true };
+//     return { error: "Not Equal" };
+//   };
+//   let notToBe = function (valf) {
+//     if (valf !== expectval) return { value: true };
+//     return { error: "Equal" };
+//   };
+//   return { toBe, notToBe };
+// };
+// console.log(expect(5).toBe("dkj"));
+// console.log(expect(5).notToBe(6));
+
+var rotate = function (nums, k) {
+  k %= nums.length;
+  nums.unshift(...nums.splice(nums.length - k));
 };
-console.log(expect(5).toBe("dkj"));
-console.log(expect(5).notToBe(6));
+// console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3));
