@@ -27,3 +27,6 @@ var lengthOfLastWord = function (s) {
 };
 
 console.log(lengthOfLastWord("hih alkjsd al  kajklsdf aseasdfsfai"));
+
+let obj = {};
+console.log(Object.keys(obj) == 0);
