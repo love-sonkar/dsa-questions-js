@@ -128,3 +128,35 @@ var rotate = function (nums, k) {
   nums.unshift(...nums.splice(nums.length - k));
 };
 // console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3));
+
+// fizzbuzz
+
+var fizzBuzz = function (n) {
+  let answer = [];
+  for (let i = 1; i <= n; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      answer.push("FizzBuzz");
+    } else if (i % 3 == 0) {
+      answer.push("Fizz");
+    } else if (i % 5 == 0) {
+      answer.push("Buzz");
+    } else {
+      answer.push(i);
+    }
+  }
+  return answer;
+};
+
+console.log(fizzBuzz(15));
+
+var checkPerfectNumber = function (num) {
+  let result = 0;
+  for (let i = 0; i < num; i++) {
+    if (num % i == 0) {
+      result += i;
+    }
+  }
+  if (result !== num) return false;
+  return true;
+};
+console.log(checkPerfectNumber(28));

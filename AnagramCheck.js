@@ -9,4 +9,22 @@ function AnagramCheck(str1, str2) {
   return false;
 }
 
-console.log(AnagramCheck("hiii", "catir"));
+// console.log(AnagramCheck("hiii", "catir"));
+
+// anagram best solution
+function CheckAnagram(str1, str2) {
+  let check = {};
+  if (str1.length !== str2.length) return false;
+  for (char of str1) {
+    check[char] = (check[char] || 0) + 1;
+  }
+  for (char of str2) {
+    if (!check[char]) return false;
+    check[char]--;
+  }
+  console.log(check);
+  return true;
+}
+
+let result = CheckAnagram("hello", "hlleo");
+console.log(result);

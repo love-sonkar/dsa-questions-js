@@ -26,7 +26,16 @@ var lengthOfLastWord = function (s) {
   return arr[arr.length - 1].length;
 };
 
-console.log(lengthOfLastWord("hih alkjsd al  kajklsdf aseasdfsfai"));
+// console.log(lengthOfLastWord("hih alkjsd al  kajklsdf aseasdfsfai"));
 
-let obj = {};
-console.log(Object.keys(obj) == 0);
+// reverse array
+
+var reverseString = function (s) {
+  let newa = [];
+  for (char in s) {
+    newa[char] = s[s.length - 1 - char];
+  }
+  return newa;
+};
+
+console.log(reverseString(["h", "e", "l", "l", "o"]));
