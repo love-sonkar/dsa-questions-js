@@ -160,3 +160,49 @@ var checkPerfectNumber = function (num) {
   return true;
 };
 console.log(checkPerfectNumber(28));
+
+let array = [20, 10, 8];
+
+//this is my function to sort arry in ascending order
+function BubbleSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j + 1];
+        arr[j + 1] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
+console.log(BubbleSort([2, 0, 2, 1, 1, 0]));
+
+const sortArrayByParityII = (arr) => {
+  let res = [];
+  let evenIndex = 0;
+  let oddIndex = 1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      res[evenIndex] = arr[i];
+      evenIndex = evenIndex + 2;
+    } else {
+      res[oddIndex] = arr[i];
+      oddIndex = oddIndex + 2;
+    }
+  }
+  return res;
+};
+
+// console.log(sortArrayByParityII([3, 2, 5, 7]));
+
+var findTheDifference = function (s, t) {
+  if (s == "") return t;
+  s = s.split("").sort();
+  t = t.split("").sort();
+  for (let i = 0; i < t.length; i++) {
+    if (s[i] !== t[i]) return t[i];
+  }
+};
+console.log(findTheDifference("abcd", "aebcd"));
