@@ -147,7 +147,7 @@ var fizzBuzz = function (n) {
   return answer;
 };
 
-console.log(fizzBuzz(15));
+// console.log(fizzBuzz(15));
 
 var checkPerfectNumber = function (num) {
   let result = 0;
@@ -159,7 +159,7 @@ var checkPerfectNumber = function (num) {
   if (result !== num) return false;
   return true;
 };
-console.log(checkPerfectNumber(28));
+// console.log(checkPerfectNumber(28));
 
 let array = [20, 10, 8];
 
@@ -177,7 +177,7 @@ function BubbleSort(arr) {
   return arr;
 }
 
-console.log(BubbleSort([2, 0, 2, 1, 1, 0]));
+// console.log(BubbleSort([2, 0, 2, 1, 1, 0]));
 
 const sortArrayByParityII = (arr) => {
   let res = [];
@@ -205,4 +205,4 @@ var findTheDifference = function (s, t) {
     if (s[i] !== t[i]) return t[i];
   }
 };
-console.log(findTheDifference("abcd", "aebcd"));
+// console.log(findTheDifference("abcd", "aebcd"));
