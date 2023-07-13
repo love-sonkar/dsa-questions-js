@@ -116,5 +116,19 @@ function demo(data) {
 }
 
 let data = "Hi";
-let ResolvePromise = demo(data);
-console.log(ResolvePromise);
+let handlepromise = demo(data);
+// promise handling
+handlepromise
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+async function getData(data) {
+  let result = await demo(data);
+  let handleresult = await result;
+  console.log(handleresult);
+}
+getData(data);
