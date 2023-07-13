@@ -2,17 +2,17 @@
 
 let cart = ["cloths", "phone", "watch"];
 
-// const promise = CreatePromise();
+const promise = CreatePromise();
 
 // for handling promise we use then catch or we can use try catch mathod to deal with promises
 
-// promise
-//   .then(function () {
-//     console.log("success");
-//   })
-//   .catch(function (error) {
-//     console.log(error.message);
-//   });
+promise
+  .then(function () {
+    console.log("success");
+  })
+  .catch(function (error) {
+    console.log(error.message);
+  });
 
 function CreatePromise(cart) {
   // here i made a promise using new Promise keyword
@@ -75,34 +75,34 @@ function UpdateWallet(summery) {
 
 // here i can handled all promises
 
-// CreateOrder(cart)
-//   .then(function (orderid) {
-//     console.log(orderid);
-//     return ProceedToPayment(orderid);
-//   })
-//   .catch(function (error) {
-//     console.log(error.message);
-//   })
-//   .then(function (cartitem) {
-//     console.log(cartitem);
-//     return ShowOrderSummery(cartitem);
-//   })
-//   .catch(function (error) {
-//     console.log(error.message);
-//   })
-//   .then(function (summery) {
-//     console.log(summery);
-//     return UpdateWallet(summery);
-//   })
-//   .catch(function (error) {
-//     console.log(error.message);
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//   })
-//   .catch(function (error) {
-//     console.log(error.message);
-//   });
+CreateOrder(cart)
+  .then(function (orderid) {
+    console.log(orderid);
+    return ProceedToPayment(orderid);
+  })
+  .catch(function (error) {
+    console.log(error.message);
+  })
+  .then(function (cartitem) {
+    console.log(cartitem);
+    return ShowOrderSummery(cartitem);
+  })
+  .catch(function (error) {
+    console.log(error.message);
+  })
+  .then(function (summery) {
+    console.log(summery);
+    return UpdateWallet(summery);
+  })
+  .catch(function (error) {
+    console.log(error.message);
+  })
+  .then(function (data) {
+    console.log(data);
+  })
+  .catch(function (error) {
+    console.log(error.message);
+  });
 
 function demo(data) {
   let pr = new Promise(function (resolve, reject) {
