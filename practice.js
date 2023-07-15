@@ -66,3 +66,33 @@ var defangIPaddr = function (address) {
 };
 
 console.log(defangIPaddr("1.1.1.1"));
+
+var moveingEnd = function (arr, removeelement) {
+  let start = 0;
+  let end = arr.length - 1;
+  let newarr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== removeelement) {
+      newarr[start] = arr[i];
+      start++;
+    } else {
+      newarr[end] = arr[i];
+      end--;
+    }
+  }
+  return newarr;
+};
+
+// console.log(moveingEnd([1, 0, 2, 3, 2, 0, 0, 4, 5, 1], 2));
+
+var findPeakElement = function (nums) {
+  let index = 0;
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[index] < nums[i]) {
+      index = i;
+    }
+  }
+  return index;
+};
+
+console.log(findPeakElement([1, 2, 1, 3, 5, 6, 4]));
