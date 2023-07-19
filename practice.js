@@ -83,7 +83,7 @@ var moveingEnd = function (arr, removeelement) {
   return newarr;
 };
 
-// console.log(moveingEnd([1, 0, 2, 3, 2, 0, 0, 4, 5, 1], 2));
+console.log(moveingEnd([1, 0, 2, 3, 2, 0, 0, 4, 5, 1], 0));
 
 var findPeakElement = function (nums) {
   let index = 0;
@@ -95,4 +95,4 @@ var findPeakElement = function (nums) {
   return index;
 };
 
-console.log(findPeakElement([1, 2, 1, 3, 5, 6, 4]));
+// console.log(findPeakElement([1, 2, 1, 3, 5, 6, 4]));
