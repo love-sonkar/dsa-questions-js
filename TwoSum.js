@@ -17,3 +17,22 @@ const twoSum = function (nums, target) {
   }
   return null;
 };
+
+console.log(twoSum([5, 25, 75], 100));
+
+// optimal solution
+
+var twoSumbest = function (numbers, target) {
+  let i = 0;
+  let j = numbers.length - 1;
+  while (numbers[i] + numbers[j] !== target) {
+    if (numbers[i] + numbers[j] > target) {
+      j--;
+    } else {
+      i++;
+    }
+  }
+  return [i + 1, j + 1];
+};
+
+console.log(twoSumbest([5, 25, 75], 100));
