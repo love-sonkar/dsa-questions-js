@@ -38,4 +38,31 @@ var reverseString = function (s) {
   return newa;
 };
 
-console.log(reverseString(["h", "e", "l", "l", "o"]));
+// console.log(reverseString(["h", "e", "l", "l", "o"]));
+
+var reverseString2 = function (s) {
+  let data = [...s];
+  let j = 0;
+  for (let i = s.length - 1; i >= 0; i--) {
+    console.log((s[j] = data[i]));
+    j++;
+  }
+  return s;
+};
+
+// console.log(reverseString2(["h", "e", "l", "l", "o"]));
+
+var integerReplacement = function (n) {
+  let count = 0;
+  while (n > 1) {
+    if (n % 2 == 0) {
+      n = n / 2;
+    } else {
+      n = n - 1;
+    }
+    count++;
+  }
+  return count;
+};
+
+console.log(integerReplacement(65535));

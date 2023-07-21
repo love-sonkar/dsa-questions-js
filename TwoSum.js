@@ -35,4 +35,4 @@ var twoSumbest = function (numbers, target) {
   return [i + 1, j + 1];
 };
 
-console.log(twoSumbest([5, 25, 75], 100));
+console.log(twoSumbest([1, 5, 12], 6));
