@@ -66,3 +66,22 @@ var integerReplacement = function (n) {
 };
 
 console.log(integerReplacement(65535));
+
+var firstUniqChar = function (s) {
+  let obj = {};
+  for (char of s) {
+    if (obj[char] == undefined) {
+      obj[char] = 0;
+    }
+    obj[char]++;
+  }
+
+  for (char in s) {
+    if (obj[s[char]] == 1) {
+      return char;
+    }
+  }
+  return -1;
+};
+
+console.log(firstUniqChar("loveleetcode"));
