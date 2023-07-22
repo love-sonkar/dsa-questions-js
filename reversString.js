@@ -65,7 +65,7 @@ var integerReplacement = function (n) {
   return count;
 };
 
-console.log(integerReplacement(65535));
+// console.log(integerReplacement(65535));
 
 var firstUniqChar = function (s) {
   let obj = {};
@@ -84,4 +84,4 @@ var firstUniqChar = function (s) {
   return -1;
 };
 
-console.log(firstUniqChar("loveleetcode"));
+// console.log(firstUniqChar("loveleetcode"));
