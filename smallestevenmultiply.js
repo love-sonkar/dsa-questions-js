@@ -9,7 +9,7 @@ var smallestEvenMultiple = function (n) {
   }
 };
 
-console.log(smallestEvenMultiple(3));
+// console.log(smallestEvenMultiple(3));
 
 // optimal solution
 
@@ -20,4 +20,4 @@ let smallestEvenMultiplebest = function (n) {
   return n * 2;
 };
 
-console.log(smallestEvenMultiplebest(6));
+// console.log(smallestEvenMultiplebest(6));
