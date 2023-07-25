@@ -41,3 +41,17 @@ var isThree = function (n) {
 };
 
 console.log(isThree(5));
+
+var intersection = function (nums1, nums2) {
+  let newarray = [];
+  for (let i = 0; i < nums1.length; i++) {
+    for (let j = 0; j < nums2.length; j++) {
+      if (nums1[i] == nums2[j]) {
+        newarray.push(nums1[i]);
+      }
+    }
+  }
+  return [...new Set(newarray)];
+};
+
+console.log(intersection([1, 2, 1], [1, 2, 1]));
