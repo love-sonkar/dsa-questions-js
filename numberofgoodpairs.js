@@ -55,3 +55,16 @@ var intersection = function (nums1, nums2) {
 };
 
 console.log(intersection([1, 2, 1], [1, 2, 1]));
+
+var fib = function (n) {
+  if (n == 0) {
+    return 0;
+  }
+  if (n == 1) {
+    return 1;
+  }
+  let fib1 = fib(n - 1) + fib(n - 2);
+  return fib1;
+};
+
+console.log(fib(3));
