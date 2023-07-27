@@ -67,4 +67,4 @@ var fib = function (n) {
   return fib1;
 };
 
-console.log(fib(3));
+// console.log(fib(3));
