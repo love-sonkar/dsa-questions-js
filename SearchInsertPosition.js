@@ -17,7 +17,7 @@ var searchInsert = function (nums, target) {
   return i;
 };
 
-console.log(searchInsert([1, 3, 5, 6], 2));
+// console.log(searchInsert([1, 3, 5, 6], 3));
 
 // my old solution
 
@@ -36,4 +36,16 @@ var searchInsert = function (nums, target) {
   return nums.indexOf(target);
 };
 
-console.log(searchInsert([], 7));
+// console.log(searchInsert([], 7));
+
+var missingNumber = function (nums) {
+  let n = nums.length;
+  let expectedsum = (n * (n + 1)) / 2;
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += nums[i];
+  }
+  return expectedsum - sum;
+};
+
+console.log(missingNumber([0, 1, 3]));
