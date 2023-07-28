@@ -48,4 +48,23 @@ var missingNumber = function (nums) {
   return expectedsum - sum;
 };
 
-console.log(missingNumber([0, 1, 3]));
+// console.log(missingNumber([0, 1, 3]));
+
+var targetIndices = function (nums, target) {
+  let list = [];
+  for (let i = 0; i <= nums.length - 2; i++) {
+    for (let j = i + 1; j <= nums.length - 1; j++) {
+      if (nums[i] > nums[j]) {
+        let temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+      }
+    }
+  }
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] == target) list.push(i);
+  }
+  return list;
+};
+
+console.log(targetIndices([1, 2, 5, 2, 3], 3));
