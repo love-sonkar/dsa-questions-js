@@ -115,20 +115,10 @@ function demo(data) {
   return pr;
 }
 
-let data = "Hi";
-let handlepromise = demo(data);
-// promise handling
-handlepromise
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+var addTwoPromises = async function (promise1, promise2) {
+  const [value1, value2] = await Promise.all([promise1, promise2]);
+  return value1 + value2;
+};
 
-async function getData(data) {
-  let result = await demo(data);
-  let handleresult = await result;
-  console.log(handleresult);
-}
-getData(data);
+let promise1 = new Promise((resolve) => setTimeout(() => resolve(0), 20));
+let promise2 = new Promise((resolve) => setTimeout(() => resolve(0), 60));

@@ -67,4 +67,13 @@ var targetIndices = function (nums, target) {
   return list;
 };
 
-console.log(targetIndices([1, 2, 5, 2, 3], 3));
+// console.log(targetIndices([1, 2, 5, 2, 3], 3));
+
+var majorityElement = function (nums) {
+  let xor = 0;
+  for (let i = 0; i < nums.length; i++) {
+    xor = xor ^ nums[i];
+  }
+  return xor;
+};
+// console.log(majorityElement([1, 1, 1, 2, 2, 2, 2]));
