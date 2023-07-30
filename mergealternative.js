@@ -32,3 +32,28 @@ console.log(mergeAlternately("aas", "pqcad"));
 // };
 
 // console.log(findDifference([1, 2, 3], [2, 4, 6]));
+
+var findMedianSortedArrays = function (nums1, nums2) {
+  let newarr = [];
+  let i = 0,
+    j = 0;
+  while (i < nums1.length || j < nums2.length) {
+    if (nums1[i] < nums2[j] || j == nums2.length) {
+      newarr.push(nums1[i]);
+      i++;
+    } else {
+      newarr.push(nums2[j]);
+      j++;
+    }
+  }
+  let length = newarr.length;
+  if (length % 2 !== 0) {
+    return newarr[Math.floor(length / 2)];
+  } else {
+    let mid = Math.floor(length / 2);
+    let miden = (newarr[mid] + newarr[mid - 1]) / 2;
+    return miden;
+  }
+};
+
+console.log(findMedianSortedArrays([1, 3, 5], [2, 4, 6]));
