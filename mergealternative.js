@@ -56,4 +56,26 @@ var findMedianSortedArrays = function (nums1, nums2) {
   }
 };
 
-console.log(findMedianSortedArrays([1, 3, 5], [2, 4, 6]));
+// console.log(findMedianSortedArrays([1, 3, 5], [2, 4, 6]));
+
+var kidsWithCandies = function (candies, extraCandies) {
+  let boolarray = [];
+  let high = candies[0];
+  for (let i = 0; i < candies.length; i++) {
+    if (high < candies[i]) {
+      high = candies[i];
+    }
+  }
+
+  for (let i = 0; i < candies.length; i++) {
+    if (candies[i] + extraCandies >= high) {
+      boolarray[boolarray.length] = true;
+    } else {
+      boolarray[boolarray.length] = false;
+    }
+  }
+
+  return boolarray;
+};
+
+// console.log(kidsWithCandies([4, 2, 1, 1, 2], 1));
