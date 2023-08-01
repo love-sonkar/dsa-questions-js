@@ -32,3 +32,26 @@ var canPlaceFlowers2 = function (flowerbed, n) {
 };
 
 console.log(canPlaceFlowers2([0, 1, 0, 0, 1], 1));
+
+var compress = function (chars) {
+  let j = 0;
+  let count = 1;
+  for (let i = 1; i <= chars.length; i++, count++) {
+    if (i == chars.length || chars[i] !== chars[i - 1]) {
+      chars[j] = chars[i - 1];
+      j++;
+      if (count >= 2) {
+        for (count of count.toString()) {
+          chars[j] = count;
+          j++;
+        }
+      }
+      count = 0;
+    }
+  }
+  chars.length = j;
+  console.log(chars);
+  return j;
+};
+
+console.log(compress(["a", "a", "b", "b", "c", "c"]));
