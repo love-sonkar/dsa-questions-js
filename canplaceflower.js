@@ -96,4 +96,29 @@ var findDuplicate = function (nums) {
   }
 };
 
-console.log(findDuplicate([1, 3, 4, 2, 3]));
+// console.log(findDuplicate([1, 3, 4, 2, 3]));
+
+var mostWordsFound = function (sentences) {
+  let maxword = sentences[0].split(" ").length;
+  for (let i = 1; i < sentences.length; i++) {
+    length = sentences[i].split(" ").length;
+    if (maxword < length) {
+      maxword = length;
+    }
+  }
+  return maxword;
+};
+
+console.log(
+  mostWordsFound([
+    "w jrpihe zsyqn l dxchifbxlasaehj",
+    "nmmfrwyl jscqyxk a xfibiooix xolyqfdspkliyejsnksfewbjom",
+    "xnleojowaxwpyogyrayfgyuzhgtdzrsyococuqexggigtberizdzlyrdsfvryiynhg",
+    "krpwiazoulcixkkeyogizvicdkbrsiiuhizhkxdpssynfzuigvcbovm",
+    "rgmz rgztiup wqnvbucfqcyjivvoeedyxvjsmtqwpqpxmzdupfyfeewxegrlbjtsjkusyektigr",
+    "o lgsbechr lqcgfiat pkqdutzrq iveyv iqzgvyddyoqqmqerbmkxlbtmdtkinlk",
+    "hrvh efqvjilibdqxjlpmanmogiossjyxepotezo",
+    "qstd zui nbbohtuk",
+    "qsdrerdzjvhxjqchvuewevyzlkyydpeeblpc",
+  ])
+);
