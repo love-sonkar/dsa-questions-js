@@ -109,16 +109,31 @@ var mostWordsFound = function (sentences) {
   return maxword;
 };
 
-console.log(
-  mostWordsFound([
-    "w jrpihe zsyqn l dxchifbxlasaehj",
-    "nmmfrwyl jscqyxk a xfibiooix xolyqfdspkliyejsnksfewbjom",
-    "xnleojowaxwpyogyrayfgyuzhgtdzrsyococuqexggigtberizdzlyrdsfvryiynhg",
-    "krpwiazoulcixkkeyogizvicdkbrsiiuhizhkxdpssynfzuigvcbovm",
-    "rgmz rgztiup wqnvbucfqcyjivvoeedyxvjsmtqwpqpxmzdupfyfeewxegrlbjtsjkusyektigr",
-    "o lgsbechr lqcgfiat pkqdutzrq iveyv iqzgvyddyoqqmqerbmkxlbtmdtkinlk",
-    "hrvh efqvjilibdqxjlpmanmogiossjyxepotezo",
-    "qstd zui nbbohtuk",
-    "qsdrerdzjvhxjqchvuewevyzlkyydpeeblpc",
-  ])
-);
+// console.log(
+//   mostWordsFound([
+//     "w jrpihe zsyqn l dxchifbxlasaehj",
+//     "qstd zui nbbohtuk",
+//     "qsdrerdzjvhxjqchvuewevyzlkyydpeeblpc",
+//   ])
+// );
+
+var numJewelsInStones = function (jewels, stones) {
+  let count = 0;
+
+  for (let i = 0; i < stones.length; i++) {
+    if (jewels.includes(stones[i])) {
+      count++;
+    }
+  }
+  // this is my solution
+  // for (let i = 0; i < jewels.length; i++) {
+  //   for (let j = 0; j < stones.length; j++) {
+  //     if (jewels[i] == stones[j]) {
+  //       count++;
+  //     }
+  //   }
+  // }
+  return count;
+};
+
+console.log(numJewelsInStones("ZA", "ZAZAABAXXX"));
