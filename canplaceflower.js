@@ -137,3 +137,17 @@ var numJewelsInStones = function (jewels, stones) {
 };
 
 console.log(numJewelsInStones("ZA", "ZAZAABAXXX"));
+
+var subtractProductAndSum = function (n) {
+  let multi = 1;
+  let sum = 0;
+  while (n > 0) {
+    let lastdigit = n % 10;
+    n = Math.floor(n / 10);
+    sum += lastdigit;
+    multi *= lastdigit;
+  }
+  return multi - sum;
+};
+
+console.log(subtractProductAndSum(100));
