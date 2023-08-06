@@ -182,3 +182,15 @@ var runningSum = function (nums) {
 };
 
 console.log(runningSum([1, 1, 1, 1, 1]));
+
+var decode = function (encoded, first) {
+  let result = [first];
+  let xor = first;
+  for (let i = 0; i < encoded.length; i++) {
+    xor = xor ^ encoded[i];
+    result.push(xor);
+  }
+  return result;
+};
+
+console.log(decode([6, 2, 7, 3], 4));
