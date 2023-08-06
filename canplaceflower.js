@@ -170,3 +170,15 @@ console.log(
     [1, 9, 5],
   ])
 );
+
+var runningSum = function (nums) {
+  let resultarray = [];
+  let sum = 0;
+  for (let i = 0; i < nums.length; i++) {
+    resultarray[i] = nums[i] + sum;
+    sum += nums[i];
+  }
+  return resultarray;
+};
+
+console.log(runningSum([1, 1, 1, 1, 1]));
