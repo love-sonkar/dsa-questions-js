@@ -151,3 +151,22 @@ var subtractProductAndSum = function (n) {
 };
 
 console.log(subtractProductAndSum(100));
+
+var maximumWealth = function (accounts) {
+  let max = 0;
+  for (let i = 0; i < accounts.length; i++) {
+    let result = accounts[i].reduce((acc, curr) => acc + curr);
+    if (result > max) {
+      max = result;
+    }
+  }
+  return max;
+};
+
+console.log(
+  maximumWealth([
+    [2, 8, 7],
+    [7, 1, 3],
+    [1, 9, 5],
+  ])
+);
