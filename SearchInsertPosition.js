@@ -77,3 +77,22 @@ var majorityElement = function (nums) {
   return xor;
 };
 console.log(majorityElement([1, 1, 1, 2, 2, 2, 2]));
+
+var createTargetArray = function (nums, index) {
+  let target = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    if (target[index[i]] !== "" && target[index[i]] !== undefined) {
+      for (let j = target.length - 1; j >= target[index[i]]; j--) {
+        let temp = target[j];
+        target[j + 1] = temp;
+      }
+      target[index[i]] = nums[i];
+    } else {
+      target[index[i]] = nums[i];
+    }
+  }
+  return target;
+};
+
+console.log(createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1]));

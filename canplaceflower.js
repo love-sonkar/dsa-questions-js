@@ -194,3 +194,25 @@ var decode = function (encoded, first) {
 };
 
 console.log(decode([6, 2, 7, 3], 4));
+
+var interpret = function (command) {
+  let output = "";
+  for (let i = 0; i < command.length; i++) {
+    if (command[i] == "G") {
+      output += command[i];
+    } else if (command[i] == "(" && command[i + 1] == ")") {
+      output += "o";
+      i++;
+    } else if (
+      command[i] == "(" &&
+      command[i + 1] == "a" &&
+      command[i + 2] == "l" &&
+      command[i + 3] == ")"
+    ) {
+      output += "al";
+    }
+  }
+  return output;
+};
+
+console.log(interpret("(al)G(al)()()G"));
