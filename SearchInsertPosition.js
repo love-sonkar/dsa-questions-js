@@ -84,15 +84,30 @@ var createTargetArray = function (nums, index) {
   for (let i = 0; i < nums.length; i++) {
     if (target[index[i]] !== "" && target[index[i]] !== undefined) {
       for (let j = target.length - 1; j >= target[index[i]]; j--) {
-        let temp = target[j];
-        target[j + 1] = temp;
+        target[j + 1] = target[j];
       }
       target[index[i]] = nums[i];
     } else {
       target[index[i]] = nums[i];
     }
+    console.log(target);
   }
   return target;
 };
 
 console.log(createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1]));
+
+var numberOfSteps = function (num) {
+  let step = 0;
+  while (num > 0) {
+    step++;
+    if (num % 2 == 0) {
+      num = num / 2;
+    } else {
+      num--;
+    }
+  }
+  return step;
+};
+
+console.log(numberOfSteps(123));
