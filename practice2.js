@@ -56,3 +56,14 @@ var maximizeSum2 = function (nums, k) {
 };
 
 console.log(maximizeSum2([5, 5, 5], 2));
+
+var xorOperation = function (n, start) {
+  let xor = 0;
+  for (let i = 0; i < n; i++) {
+    xor = xor ^ start;
+    start += 2;
+  }
+  return xor;
+};
+
+console.log(xorOperation(4, 3));
