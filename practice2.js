@@ -67,3 +67,21 @@ var xorOperation = function (n, start) {
 };
 
 console.log(xorOperation(4, 3));
+
+var productExceptSelf = function (nums) {
+  let res = [];
+  let prefix = 1;
+  for (let i = 0; i < nums.length; i++) {
+    res[i] = prefix;
+    prefix *= nums[i];
+  }
+
+  let postfix = 1;
+  for (let j = nums.length - 1; j >= 0; j--) {
+    res[j] *= postfix;
+    postfix *= nums[j];
+  }
+  return res;
+};
+
+console.log(productExceptSelf([1, 2, 3, 4]));
