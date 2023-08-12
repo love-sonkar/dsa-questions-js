@@ -97,3 +97,23 @@ var minPartitions = function (n) {
 };
 
 console.log(minPartitions("27346209830709182346"));
+
+var rearrangeArray = function (nums) {
+  let positive = [];
+  let negetive = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] > 0) {
+      positive.push(nums[i]);
+    } else {
+      negetive.push(nums[i]);
+    }
+  }
+  let result = [];
+  for (let i = 0; i < positive.length; i++) {
+    result.push(positive[i]);
+    result.push(negetive[i]);
+  }
+  return result;
+};
+
+console.log(rearrangeArray([-1, 1]));
