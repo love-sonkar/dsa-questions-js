@@ -85,3 +85,15 @@ var productExceptSelf = function (nums) {
 };
 
 console.log(productExceptSelf([1, 2, 3, 4]));
+
+var minPartitions = function (n) {
+  let output = n[0];
+  for (let i = 1; i < n.length; i++) {
+    if (output < n[i]) {
+      output = n[i];
+    }
+  }
+  return +output;
+};
+
+console.log(minPartitions("27346209830709182346"));
