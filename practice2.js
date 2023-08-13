@@ -117,3 +117,30 @@ var rearrangeArray = function (nums) {
 };
 
 console.log(rearrangeArray([-1, 1]));
+
+var countDistinctIntegers = function (nums) {
+  for (num of nums) {
+    let newval = String(num);
+  }
+  return nums;
+};
+
+console.log(countDistinctIntegers([1, 13, 10, 12, 31]));
+
+var createTargetArray = function (nums, index) {
+  let target = [],
+    max = -1;
+  for (let i = 0; i < index.length; i++) {
+    if (index[i] <= max) {
+      for (let j = 0; j < i; j++) {
+        if (index[i] <= index[j]) index[j]++;
+        if (index[j] > max) max = index[j];
+      }
+    }
+    max = Math.max(max, index[i]);
+  }
+  for (const i in nums) target[index[i]] = nums[i];
+  return target;
+};
+
+console.log(createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1]));
