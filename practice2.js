@@ -206,3 +206,15 @@ var singleNonDuplicate = function (nums) {
 };
 
 console.log(singleNonDuplicate([1, 1, 2, 3, 3, 4, 4, 8, 8]));
+
+var singleNonDuplicate2 = function (nums) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== nums[i + 1]) {
+      return nums[i];
+    } else {
+      i++;
+    }
+  }
+};
+
+console.log(singleNonDuplicate2([1, 1, 2, 2, 3, 3, 4, 4, 8]));
