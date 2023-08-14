@@ -144,3 +144,65 @@ var createTargetArray = function (nums, index) {
 };
 
 console.log(createTargetArray([0, 1, 2, 3, 4], [0, 1, 2, 2, 1]));
+
+// not fully done
+// var findKthLargest = function (nums, k) {
+//   if (nums.length == 1) return nums[0];
+//   if (nums[k] == undefined) return nums[nums.length - 1];
+//   let output;
+
+//   for (let i = k; i < nums.length; i++) {
+//     if (nums[k] < nums[i]) {
+//       output = nums[i];
+//       break;
+//     }
+//   }
+
+//   if (output === undefined) {
+//     for (let i = 0; i < nums.length; i++) {
+//       if (nums[k] < nums[i]) {
+//         output = nums[i];
+//       }
+//     }
+//   }
+//   return output;
+// };
+
+// console.log(findKthLargest([99, 99], 1));
+
+var findDuplicates = function (nums) {
+  let output = [];
+  let obj = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (obj[nums[i]] == undefined) {
+      obj[nums[i]] = 0;
+    }
+    obj[nums[i]]++;
+
+    if (obj[nums[i]] == 2) {
+      output.push(nums[i]);
+    }
+  }
+
+  return output;
+};
+
+console.log(findDuplicates([1, 1, 2]));
+
+var singleNonDuplicate = function (nums) {
+  let obj = {};
+  for (num of nums) {
+    if (obj[num] == undefined) {
+      obj[num] = 0;
+    }
+    obj[num]++;
+  }
+
+  for (num of nums) {
+    if (obj[num] < 2) {
+      return num;
+    }
+  }
+};
+
+console.log(singleNonDuplicate([1, 1, 2, 3, 3, 4, 4, 8, 8]));
